@@ -26,7 +26,7 @@
 ## [2025-10-27 MeD] Update to use controlled vocabulary
 ##   ("Controlled-Vocab.R") and adjust output columns to make data
 ##   integration easier.
-##   Change program name from 'parseToCSV.R' --> "parse-Marchand-Sharma_Systems-Serology.R"
+##   Change program name from 'parseToCSV.R' --> "parse-Marchant-Sharma_Systems-Serology.R"
 ## [2026-02-07 MeD] Update to include "ValueUnit" in output data.
 ##                  Fix items around StrainProt and Protein to match Dobaño dataset.
 ## [2026-02-23 MeD] Add info to log about translations of names based on Spreadsheet:Notes.
@@ -36,8 +36,8 @@ library(AnalysisHeader)
 library(readxl)
 source("Controlled-Vocab.R")
 
-PROGRAM <- 'parse-Marchand-Sharma_Systems-Serology.R'
-VERSION <- 'v2.3'
+PROGRAM <- 'parse-Marchant-Sharma_Systems-Serology.R'
+VERSION <- 'v2.4'
 options(warn=1, width=132)
 
 runInfo <- collectRunInfo(program=PROGRAM, version=VERSION)
@@ -50,7 +50,7 @@ dhLine <- paste(rep('=', 80), collapse='')
 ## FILE I/O
 
 ## Excel file contain 3 data work sheets plus a "Notes" worksheet
-inputFile <- 'Marchand-Sharma-Correia_Systems-Serology_2024-10-23.xlsx'
+inputFile <- 'Marchant-Sharma-Correia_Systems-Serology_2024-10-23.xlsx'
 ## Worksheet names that contain data
 samplesWS   <- 'Database'         # Patient Sample Data
 standardsWS <- 'Standard curves'  # Standard Curve Data
